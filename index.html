@@ -8,11 +8,11 @@
 <body>
   <div id="app" class="container">
   <h1 class="title">Книжная полка</h1>
-   <a href="#addBooks"><button class="add-button">Добавить кингу</button></a>
+   <a href="#addBooks"><button onclick="showForm()" class="add-button">Добавить кингу</button></a>
   <div class="main_list" id="listofitems">
     <div class="items" id="items1">
-      <div class="img" id="img1">
-        <img src="" alt="" class="cover" />
+      <div class="img" >
+        <img id="img1" src="https://images-na.ssl-images-amazon.com/images/I/511uGrsGmyL._SX379_BO1,204,203,200_.jpg" alt="" class="cover" />
       </div>
       <div class="items-info">
         <h3 class="book-title" id="title1">Javascript и Jquery</h3>
@@ -20,13 +20,13 @@
         <p class="book-year" id="year1">2016 г.</p>
       </div>
       <div class="changes">
-         <a href="#addBooks"><input type="button" id="edit_button1" value="Редактировать" class="edit" onclick="edit_items('1')"></a>
-        <input type="button" value="Удалить" class="delete" onclick="delete_items('1')">
+         <a href="#addBooks"><input type="button" id="edit_button1" value="Редактировать" class="button_action" onclick="edit_items('1')"></a>
+        <input type="button" value="Удалить" class="button_action" onclick="delete_items('1')">
       </div>
     </div>
     <div class="items" id="items2">
-      <div class="img" id="img2">
-        <img src="" alt="" class="cover" />
+      <div class="img" >
+        <img id="img2" src="https://ozon-st.cdn.ngenix.net/multimedia/1011395255.jpg" alt="" class="cover" />
       </div>
       <div class="items-info">
         <h3 class="book-title" id="title2">Изучаем программирование на Javascript</h3>
@@ -34,13 +34,13 @@
         <p class="book-year" id="year2">2017 г.</p>
       </div>
       <div class="changes">
-        <a href="#addBooks"><input type="button" id="edit_button2" value="Редактировать" class="edit" onclick="edit_items('2')"></a>
-        <input type="button" value="Удалить" class="delete" onclick="delete_items('2')">
+        <a href="#addBooks"><input type="button" id="edit_button2" value="Редактировать" class="button_action" onclick="edit_items('2')"></a>
+        <input type="button" value="Удалить" class="button_action" onclick="delete_items('2')">
       </div>
     </div>
     <div class="items" id="items3">
-      <div class="img" id="img3">
-        <img src="" alt="" class="cover" />
+      <div class="img">
+        <img  id="img3" src="http://ozon-st.cdn.ngenix.net/multimedia/1007123068.jpg" alt="" class="cover" />
       </div>
       <div class="items-info">
         <h3 class="book-title" id="title3">Секреты Javascript ниндзя</h3>
@@ -48,38 +48,38 @@
         <p class="book-year" id="year3">2017 г.</p>
       </div>
       <div class="changes">
-        <a href="#addBooks"><input type="button" id="edit_button3" value="Редактировать" class="edit" onclick="edit_items('3')"></a>
-        <input type="button" value="Удалить" class="delete" onclick="delete_items('3')">
+        <a href="#addBooks"><input type="button" id="edit_button3" value="Редактировать" class="button_action" onclick="edit_items('3')"></a>
+        <input type="button" value="Удалить" class="button_action" onclick="delete_items('3')">
       </div>
     </div>
   </div>
 
   <div class="edit-list">
     <h1 class="title" id="addBooks">Книжная полка</h1>
-  
-    <h3 class="edit-title">Редактирование книги</h3>
-    <div class="main-list">
     <form action="" class="edit-book">
     <input type="submit" name="" value="Добавить кингу" class="add-button" onclick="add_items();">
+    <h3 class="edit-title">Редактирование книги</h3>
+    <div class="main-list">
+    
       <div class="group">
         <label for="book_title">Наименовние</label>
         <input required type="text" class="control" id="book_title" placeholder="Введите название книги" />
       </div>
       <div class="group">
         <label for="author_book">Автор</label>
-        <input type="text" class="control" id="author_book" placeholder="Введите автора книги"/>
+        <input required type="text" class="control" id="author_book" placeholder="Введите автора книги"/>
       </div>
       <div class="group">
         <label for="year_book">Год выпуска</label>
-        <input type="text" class="control year" id="year_book" placeholder="Введите год"/>
+        <input required type="text" pattern="[0-9]{4}" class="control year" id="year_book" placeholder="Введите год"/>
       </div>
       <div class="group">
         <label for="image_book">Изображение</label>
-        <input type="text" class="control" id="image_book" placeholder="Введите адрес изображения"/>
+        <input required type="text" class="control" id="image_book" placeholder="Введите адрес изображения"/>
       </div>
       <div class="group">
         <input type="submit" class="add-button" id="save" onclick="save_items()" value="Сохранить"/>
-        <button class="add-button cancel">Отменить</button>
+        <button class="add-button cancel" onclick="hideForm()">Отменить</button>
       </div>
     </form>  
   </div>
