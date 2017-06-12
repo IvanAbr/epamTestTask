@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="container">
+  <h1 class="title">Книжная полка</h1>
+   <a href="#addBooks"><button class="add-button">Добавить кингу</button></a>
+  <div class="main_list" id="listofitems">
+    <div class="items" id="items1">
+      <div class="img" id="img1">
+        <img src="" alt="" class="cover" />
+      </div>
+      <div class="items-info">
+        <h3 class="book-title" id="title1">Javascript и Jquery</h3>
+        <p class="book-author" id="author1">Дэвид Сойер Макфарланд</p>
+        <p class="book-year" id="year1">2016 г.</p>
+      </div>
+      <div class="changes">
+         <a href="#addBooks"><input type="button" id="edit_button1" value="Редактировать" class="edit" onclick="edit_items('1')"></a>
+        <input type="button" value="Удалить" class="delete" onclick="delete_items('1')">
+      </div>
+    </div>
+    <div class="items" id="items2">
+      <div class="img" id="img2">
+        <img src="" alt="" class="cover" />
+      </div>
+      <div class="items-info">
+        <h3 class="book-title" id="title2">Изучаем программирование на Javascript</h3>
+        <p class="book-author" id="author2">Эрик Фримен, Элизабет Робсон</p>
+        <p class="book-year" id="year2">2017 г.</p>
+      </div>
+      <div class="changes">
+        <a href="#addBooks"><input type="button" id="edit_button2" value="Редактировать" class="edit" onclick="edit_items('2')"></a>
+        <input type="button" value="Удалить" class="delete" onclick="delete_items('2')">
+      </div>
+    </div>
+    <div class="items" id="items3">
+      <div class="img" id="img3">
+        <img src="" alt="" class="cover" />
+      </div>
+      <div class="items-info">
+        <h3 class="book-title" id="title3">Секреты Javascript ниндзя</h3>
+        <p class="book-author" id="author3">Джон Резиг, Беэр Бибо</p>
+        <p class="book-year" id="year3">2017 г.</p>
+      </div>
+      <div class="changes">
+        <a href="#addBooks"><input type="button" id="edit_button3" value="Редактировать" class="edit" onclick="edit_items('3')"></a>
+        <input type="button" value="Удалить" class="delete" onclick="delete_items('3')">
+      </div>
+    </div>
+  </div>
+
+  <div class="edit-list">
+    <h1 class="title" id="addBooks">Книжная полка</h1>
+  
+    <h3 class="edit-title">Редактирование книги</h3>
+    <div class="main-list">
+    <form action="" class="edit-book">
+    <input type="submit" name="" value="Добавить кингу" class="add-button" onclick="add_items();">
+      <div class="group">
+        <label for="book_title">Наименовние</label>
+        <input required type="text" class="control" id="book_title" placeholder="Введите название книги" />
+      </div>
+      <div class="group">
+        <label for="author_book">Автор</label>
+        <input type="text" class="control" id="author_book" placeholder="Введите автора книги"/>
+      </div>
+      <div class="group">
+        <label for="year_book">Год выпуска</label>
+        <input type="text" class="control year" id="year_book" placeholder="Введите год"/>
+      </div>
+      <div class="group">
+        <label for="image_book">Изображение</label>
+        <input type="text" class="control" id="image_book" placeholder="Введите адрес изображения"/>
+      </div>
+      <div class="group">
+        <input type="submit" class="add-button" id="save" onclick="save_items()" value="Сохранить"/>
+        <button class="add-button cancel">Отменить</button>
+      </div>
+    </form>  
+  </div>
+  </div>
+  
+</div>
+<script src="main.js"></script>
+</body>
+</html>
