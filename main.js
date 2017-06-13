@@ -19,7 +19,7 @@ function edit_items(no) {
 function delete_items(no) {
 	var question = confirm("Вы уверены?") 
 	if (question === true) {
-	document.getElementById("items"+no+"").outerHTML="";
+		document.getElementById("items"+no+"").outerHTML="";
 	} 
 }
 

@@ -46,10 +46,16 @@ a[href="#addBooks"] {
 }
 .button_action {
   display:block;
-  width:60%;
+  width:80%;
   margin:10px;
   padding:10px;
   max-width:100%;
+  background: white;
+  border: 1px solid grey;
+}
+.button_action:hover {
+  background:#e2e1e1;
+  transition: 0.8s;
 }
 .edit-list {
 display: none;
@@ -67,7 +73,4 @@ display: none;
 }
 .control.year {
   width:10%;
-}
-.delete {
-  
 }
